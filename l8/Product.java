@@ -4,7 +4,7 @@ public class Product {
     private float price;
     private String currency = "PLN";
 
-    public static Product create(String name, Category category, float price, String currency) {
+    private static Product create(String name, Category category, float price, String currency) {
         if (category != null) {
             return new Product(name, category, price, currency);
         }
@@ -143,3 +143,4 @@ public class Product {
         }
     }
 }
+
