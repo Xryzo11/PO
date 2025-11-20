@@ -1,14 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        /* Product testProduct1 = new Product.Builder()
-                .name("a")
-                .build();
-        System.out.println(testProduct1); */  // zwraca blad - produkt nie moze byc darmowy
+        try {
+            Product testProduct1 = new Product.Builder()
+                    .name("a")
+                    .build();
+            System.out.println(testProduct1);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+        }
 
-        /* Product testProduct2 = new Product.Builder()
-                .price(2)
-                .build();
-        System.out.println(testProduct2); */ // zwraca blad - produkt musi miec nazwe
+        try {
+            Product testProduct2 = new Product.Builder()
+                    .price(2)
+                    .build();
+            System.out.println(testProduct2);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e);
+        }
 
         Product testProduct3 = new Product.Builder()
                 .name("c")
@@ -41,3 +49,4 @@ public class Main {
         System.out.println(testProduct6);
     }
 }
+
