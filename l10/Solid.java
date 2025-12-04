@@ -18,6 +18,13 @@ public abstract class Solid {
         return unit;
     }
 
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Solid solid = (Solid) o;
+        return unit == solid.unit;
+    }
+
     public abstract double volume();
     public abstract double surfaceArea();
 }

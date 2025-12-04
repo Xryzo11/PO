@@ -30,5 +30,19 @@ public class Main {
         } catch (LessThanZero e) {
             System.out.println(e);
         }
+
+        System.out.println("\n\n=== Test polimorfizmu ===");
+        Solid[] solids = {
+                new Cuboid(Solid.Unit.cm, 5, 3, 2),
+                new Cone(Solid.Unit.m, 3, 4),
+                new Cuboid(Solid.Unit.dm, 10, 10, 10)
+        };
+
+        for (Solid solid : solids) {
+            System.out.println(solid);
+            System.out.println("Objętość: " + solid.volume() + " " + solid.getUnit() + "3");
+            System.out.println("Pole powierzchni: " + solid.surfaceArea() + " " + solid.getUnit() + "2");
+            System.out.println();
+        }
     }
 }
